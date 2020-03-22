@@ -17,7 +17,6 @@ var Blackjack = /** @class */ (function () {
     }
     Blackjack.prototype.ai = function () {
         this.dealer.showAll();
-        this.dealer.displayCard();
         while (this.dealer.calculateHand() < 17) {
             this.deck.giveTop(this.dealer, true);
         }
@@ -63,6 +62,7 @@ var Blackjack = /** @class */ (function () {
     Blackjack.prototype.end = function () {
         var dealerScore = this.dealer.calculateHand();
         var playerScore = this.player.calculateHand();
+        this.dealer.showAll();
         if (playerScore <= 21 &&
             this.player.countCardInHand() >= this.charlieCardCount) {
             console.log("Player Charlie~");

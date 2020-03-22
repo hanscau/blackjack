@@ -98,6 +98,7 @@ class Player {
 
   public showAll(): void {
     this.hand.showAll();
+    this.displayCard();
   }
 
   public shuffle(): void {

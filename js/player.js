@@ -67,6 +67,7 @@ var Player = /** @class */ (function () {
     };
     Player.prototype.showAll = function () {
         this.hand.showAll();
+        this.displayCard();
     };
     Player.prototype.shuffle = function () {
         this.hand.mathematicallyProvenShuffle();

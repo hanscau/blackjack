@@ -29,7 +29,6 @@ class Blackjack {
 
   public ai(): void {
     this.dealer.showAll();
-    this.dealer.displayCard();
 
     while (this.dealer.calculateHand() < 17) {
       this.deck.giveTop(this.dealer, true);
@@ -82,6 +81,8 @@ class Blackjack {
   public end(): void {
     let dealerScore: number = this.dealer.calculateHand();
     let playerScore: number = this.player.calculateHand();
+
+    this.dealer.showAll();
 
     if (
       playerScore <= 21 &&
