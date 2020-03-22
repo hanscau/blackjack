@@ -2,8 +2,6 @@ var Blackjack = /** @class */ (function () {
     function Blackjack() {
         this.startingCredit = 500;
         this.charlieCardCount = 5;
-        this.isPlayerDone = false;
-        this.isPlayerOver = false;
         this.ui = new blackjackUI();
         this.player = new Player("Player");
         this.dealer = new Player("Dealer");
@@ -60,8 +58,7 @@ var Blackjack = /** @class */ (function () {
         this.deck.giveTop(this.dealer, true);
         this.deck.giveTop(this.player, true);
         this.deck.giveTop(this.dealer, false);
-        this.isPlayerDone = false;
-        this.isPlayerOver = false;
+        this.fifteenCheck();
     };
     Blackjack.prototype.end = function () {
         var dealerScore = this.dealer.calculateHand();

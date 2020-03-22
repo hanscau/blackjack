@@ -8,9 +8,6 @@ class Blackjack {
   startingCredit: number = 500;
   charlieCardCount: number = 5;
 
-  isPlayerDone: boolean = false;
-  isPlayerOver: boolean = false;
-
   constructor() {
     this.ui = new blackjackUI();
 
@@ -79,8 +76,7 @@ class Blackjack {
     this.deck.giveTop(this.player, true);
     this.deck.giveTop(this.dealer, false);
 
-    this.isPlayerDone = false;
-    this.isPlayerOver = false;
+    this.fifteenCheck();
   }
 
   public end(): void {
