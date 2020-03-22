@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="overlay" id="overlay" style="display:flex">
+            <h1 id="overlay-label">Set bet!</h1>
+            <p id="bet-ui">bet: <input type="number" name="bet" id="bet-input"><button id="bet-btn">Bet!</button>
+            </p>
+            <button class="reset" id="gameover">Restart</button>
+        </div>
+        <div class="label">
+            <h3>Player</h3>
+            <h3>Dealer</h3>
+        </div>
+        <div class="label">
+            <p>$<span id="player-credit">0</span></p>
+            <p>$<span id="dealer-credit">0</span></p>
+        </div>
+        <div class="play-space">
+            <div class="play-space__player" id="player">
+            </div>
+            <div class="play-space__dealer" id="dealer">
+            </div>
+            <div class="play-space__deck-space" id="deck-space">
+                <div class="deck">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                    <img class="deck__card" src="assets/red_back.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="hit">Hit</button>
+            <button id="pass">Pass</button>
+            <button id="run" disabled>Run</button>
+            <button style="display:none" class="red-btn" id="reset">Reset</button>
+        </div>
+        <img id="anim-card" class="deck__card" src="assets/red_back.png" alt="">
+    </div>
+
+    <script src="js/Card.js"></script>
+
+    <script src="js/Deck.js"></script>
+
+    <script src="js/Player.js"></script>
+    <script src="js/blackjackUI.js"></script>
+
+    <script src="js/blackjack.js"></script>
+
+    <script src="js/Main.js"></script>
+
+</body>
+
+</html>
