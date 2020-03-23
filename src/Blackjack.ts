@@ -7,6 +7,8 @@ class Blackjack {
 
   startingCredit: number = 500;
   charlieCardCount: number = 5;
+  dealerDelay: number = 2000;
+  endDelay: number = 2000;
 
   constructor() {
     this.ui = new blackjackUI();
@@ -79,6 +81,12 @@ class Blackjack {
   }
 
   public end(): void {
+    setTimeout(() => {
+      this.finalTally();
+    }, this.endDelay);
+  }
+
+  public finalTally(): void {
     let dealerScore: number = this.dealer.calculateHand();
     let playerScore: number = this.player.calculateHand();
 
