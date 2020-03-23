@@ -1,4 +1,4 @@
-$small-screen: 700px;
+$small-screen: 1000px;
 
 html,
 body {
@@ -129,6 +129,7 @@ button:disabled {
 
   @media screen and (max-width: $small-screen) {
     grid-template-columns: 1fr 1fr;
+    margin-top: 32px;
   }
 }
 
