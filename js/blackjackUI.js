@@ -29,7 +29,7 @@ var blackjackUI = /** @class */ (function () {
     blackjackUI.prototype.showWin = function () {
         this.overlayWords.innerHTML = "You've Won!";
         this.overlayDesc.innerHTML = "Set the bet for your next round";
-        this.overlay.style.backgroundColor = "#cccc00bb";
+        this.overlay.style.backgroundColor = "rgb(6, 121, 2, 0.8)";
         this.overlay.style.display = "flex";
     };
     blackjackUI.prototype.showLose = function () {
@@ -48,7 +48,7 @@ var blackjackUI = /** @class */ (function () {
         this.overlayWords.innerHTML = "BLACK JACK!";
         this.overlayDesc.innerHTML =
             "You've got twice the bet!<br>Set the bet for your next round";
-        this.overlay.style.backgroundColor = "#eeff00bb";
+        this.overlay.style.backgroundColor = "rgb(6, 121, 2, 0.8)";
         this.overlay.style.display = "flex";
     };
     blackjackUI.prototype.showCharlie = function () {
